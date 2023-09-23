@@ -1,0 +1,11 @@
+.demo{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+}
+.sideBar{
+  margin-left: 5em;  
+  padding: 1em;
+ 
+}

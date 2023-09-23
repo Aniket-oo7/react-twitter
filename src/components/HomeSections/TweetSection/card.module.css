@@ -1,0 +1,46 @@
+.mainSection{
+    width: 100%;
+   
+    border-top: rgb(165, 164, 164) 1px solid;
+}
+.topSection{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    
+}
+.cardHeader{
+    width: 60%;
+    margin-left: 0.5em;
+    line-height: 0.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: 500;
+}
+.userName{
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: 500;
+}
+.tweetCaption{
+    align-content: center;
+    width: 90%;
+    padding-left: 20px;
+    font-size: smaller;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.imgContainer img{
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    height: 20em;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 4em;
+    overflow: hidden;
+    transition: 1s;
+}
+.imgContainer img:hover{
+    scale: 1.04;
+}

@@ -1,0 +1,15 @@
+.tweetActionsMain{
+    width: 100%;
+display: flex;
+flex-direction: row;
+gap: 3em;
+padding-left: 2.5em;
+}
+.tweetActionsOptions{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.tweetActionsOptions:hover{
+    cursor: pointer;
+}

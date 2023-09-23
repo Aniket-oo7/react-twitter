@@ -1,0 +1,32 @@
+.feedSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-right: rgb(224, 223, 223) 1px solid;
+      border-left: rgb(224, 223, 223) 1px solid;
+}
+.feedSectionTweetPost{
+    width: 97%;
+    padding: 0.5em;
+    border-top:rgb(224, 223, 223) 1px solid;
+}
+
+.heading{
+    font-size: large;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+.Button{
+    display: flex;
+    justify-content: space-around;
+}
+.childButtons{
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+    font-size: smaller;
+    height: 3em;
+    width: 8em;
+    color: black;
+}

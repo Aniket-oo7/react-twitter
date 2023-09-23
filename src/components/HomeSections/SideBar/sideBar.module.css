@@ -1,0 +1,36 @@
+.sideBarMain{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    position: fixed;
+}
+.twitterLogo{
+    color: rgb(66, 175, 218); 
+    font-size: 42px;
+    margin-top: 0.5em;
+    margin-left: 2rem;
+    margin-bottom: 0.5em;
+}
+.fullview{
+    display: flex;
+    flex-direction: row;
+}
+.sideBarOptions{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 0.5em;
+    align-items: center;
+    background-color: white;
+    border-radius: 18px;
+    padding: 0.5em;
+    font-size: 18px;
+}
+.sideBarOptions a{
+    font-weight: 500;
+}
+.sideBarOptions:hover{
+    background-color: rgb(235, 232, 232);
+    cursor: pointer;
+}
