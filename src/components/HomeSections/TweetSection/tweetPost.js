@@ -1,15 +1,21 @@
+import { useEffect } from 'react';
 import { Avatar, Dialog, IconButton} from '@mui/material';
 import React, { useState, useRef } from "react";
 import { Photo, Gif, Poll, EmojiEmotions, Schedule } from "@mui/icons-material";
 // import EmojiPicker from "react-emoji-picker";
 import { useDispatch } from "react-redux";
-// import { tweetDataSlice } from "../../assets/redux/ReduxData";
+import { tweetDataSlice } from '../../../ReduxData/ReduxStore';
 import { red } from "@mui/material/colors";
 import { useSelector } from 'react-redux';
 import styles from './tweetPost.module.css'
+import { userName } from '../SideBar/profileButton';
 
 function TweetPost(){
+  
+  const userLoginData = JSON.parse(localStorage.getItem("loginUserDetails"))
+  const localUserData =JSON.parse(localStorage.getItem("userData"))
 
+  const [name,setName] = useState("")
    const [mediaFile, setMediaFile] = useState(null);
   const [tweets, setTweets] = useState([]);
   const [message, setMessage] = useState("");
@@ -21,6 +27,19 @@ function TweetPost(){
   const tweetsArr = useSelector((state) => state.tweetData.tweets)
 
 
+  // useEffect(() => {
+    
+  //    const tempData = localUserData.find((item) =>
+  //     (item.name == userLoginData.phone || item.phone == userLoginData.phone) && item.pass == userLoginData.pass
+  //     )
+  //     if(tempData != undefined){
+  //         setName(tempData.name)
+          
+  //     } else{
+  //         setName("Guest")
+      
+  //     }
+  // },[])
   // this is the function to select image for tweet box 
   const handleMediaUpload = (event) => {
     setMediaFile(event.target.files[0]);
@@ -34,15 +53,13 @@ function TweetPost(){
     const handleUploadClick = (e) => {
     e.preventDefault();
     if (message != "") {
-      // dispatch(tweetDataSlice.actions.addNewTweet(message));
+      dispatch(tweetDataSlice.actions.addNewTweet(message));
       setMessage("");
-      console.log(tweetsArr)
     } else {
       alert("Please write what you have to tweet.");
     }
   };
-
-    return(
+return(
      
     <div className={styles.twitterui}>
   {/* FIrst child of twitterui     */}
@@ -52,7 +69,7 @@ function TweetPost(){
           alt="Travis Howard"
           src="/static/images/avatar/2.jpg"
         >
-          {"Tw"}
+          {userName[0]}
         </Avatar>
       </div>
   

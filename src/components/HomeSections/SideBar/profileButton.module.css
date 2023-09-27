@@ -1,5 +1,5 @@
 .profileButton{
-    width: 15%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,11 +13,11 @@
     background-color: rgb(221, 221, 218);
 }
 .staticProfile{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     gap: 1em;
-    margin-left: 25%;
+    margin-left: 19%;
 }
 .profileDetails{
     width: 2%;

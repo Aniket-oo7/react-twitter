@@ -78,7 +78,7 @@ function SideBar(){
 
         <Button
         variant="contained"
-        sx={{borderRadius:'25px',width:'15%'}}
+        sx={{borderRadius:'25px',width:'40%'}}
         onClick={handleClickOpen}>
           Tweet
         </Button>

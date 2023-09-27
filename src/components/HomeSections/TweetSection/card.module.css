@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     padding: 15px;
+    align-items: center;
     
 }
 .cardHeader{
@@ -18,16 +19,16 @@
     font-weight: 500;
 }
 .userName{
-    font-family: Geneva, Tahoma, sans-serif;
-    font-size: small;
-    font-weight: 500;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: 430;
 }
 .tweetCaption{
     align-content: center;
     width: 90%;
     padding-left: 20px;
     font-size: smaller;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 .imgContainer img{
     border: none;

@@ -1,5 +1,6 @@
 import { create } from "@mui/material/styles/createTransitions";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { userName } from "../components/HomeSections/SideBar/profileButton";
 
 export const loginOrLogOutSlice = createSlice({
     name:'loginData',
@@ -43,15 +44,36 @@ export const tweetDataSlice = createSlice({
     reducers: {
       fetchTweets:(state, actions) => {
         const tempData = [...actions.payload];
+
         const newData = tempData.map((item) => {
+          let {createdAt} = item
           return {
             ...item,
+            createdAt:createdAt.slice(0,10),
             viewCount: parseInt((Math.random() * 1000).toFixed(0)),
             shareCount: parseInt((Math.random() * 1000).toFixed(0)),
           };
         });
         // console.log("Hello", newData);
         state.tweets.push(...newData);
+      },
+      
+      addNewTweet:(state,action) => {
+        const content = action.payload
+        const newTweet = {
+          commentCount:parseInt((Math.random() * 1000).toFixed(0)),
+          content:content,
+          createdAt: new Date().toDateString(),
+          id: new Date(),
+          isLiked:false,
+          "image": `https://picsum.photos/1000/500?q=${state.tweets.length  + 1}`,
+          tweetedBy:{id:new Date(),name:userName},
+          likeCount:parseInt((Math.random() * 1000).toFixed(0)),
+          viewCount:parseInt((Math.random() * 1000).toFixed(0)),
+          reTweetsCount:parseInt((Math.random() * 1000).toFixed(0)),
+          shareCount:parseInt((Math.random() * 1000).toFixed(0))
+        }
+        state.tweets.unshift(newTweet)
       },
       
       addCommentCount : (state ,action) => {

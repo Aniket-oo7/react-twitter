@@ -5,7 +5,6 @@ import Login from "./components/Pages/Login/login";
 import Register from "./components/Pages/Register/register";
 import LoginMain from "./components/Pages/Login/LoginMain";
 import SideBar from "./components/HomeSections/SideBar/sideBar";
-import DemoPreview from "./components/demoPreview";
 
 function App(){
   return (
@@ -17,7 +16,7 @@ function App(){
       <Route path="/signup" element={<Register />}/>
       <Route path="/loginMain" element={<LoginMain />}/>
       <Route path="/sideBar" element={<SideBar/>}/>
-      <Route path="/demoPreview" element={<DemoPreview/>}/>
+      
     </Routes>
       </BrowserRouter>
   

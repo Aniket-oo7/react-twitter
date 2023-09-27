@@ -7,6 +7,7 @@ import {useNavigate} from 'react-router'
 import {useDispatch} from 'react-redux'
 import { loginOrLogOutSlice } from "../../../ReduxData/ReduxStore";
 
+export let userName = "";
 
 function ProfileButton(){
     const [name,setName] = useState("Guest")
@@ -16,7 +17,7 @@ function ProfileButton(){
     const localUserData =JSON.parse(localStorage.getItem("userData"))
     const navigate = useNavigate()
     const dispatch = useDispatch()
-
+    userName = name;
     useEffect(() => {
        const tempData = localUserData.find((item) =>
         (item.name == userLoginData.phone || item.phone == userLoginData.phone) && item.pass == userLoginData.pass
@@ -28,7 +29,9 @@ function ProfileButton(){
             setName("Guest")
             setPhone("")
         }
-    },[])    
+    },[anchorE1])    
+
+    
     
     function handleUserLoginLogout(event){
         setAnchorE1(event.currentTarget)
